@@ -1,0 +1,16 @@
+.git
+.next
+node_modules
+
+# Local-only archive and handoff material
+backup
+backups
+exports
+.tmp-screens
+*.bak
+*.tar.gz
+
+# Local generated files
+.DS_Store
+tsconfig.tsbuildinfo
+next-env.d.ts

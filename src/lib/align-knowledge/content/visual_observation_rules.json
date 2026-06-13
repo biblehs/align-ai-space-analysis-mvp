@@ -1,0 +1,30 @@
+[
+  {
+    "id": "lighting_scan",
+    "category": "lighting",
+    "observationFocus": "Identify dominant light source position, glare behavior, warmth, and whether evening light feels single-layered.",
+    "watchFor": ["high direct light", "visible glare", "lack of low light", "cold functional emphasis"],
+    "avoidOverclaiming": ["do not infer medical outcomes", "do not assume windows outside the frame", "do not prescribe products at this stage"]
+  },
+  {
+    "id": "blank_space_scan",
+    "category": "blank_space",
+    "observationFocus": "Distinguish supportive breathing room from unresolved emptiness.",
+    "watchFor": ["large bare wall", "empty zone with no landing point", "space that feels suspended rather than open"],
+    "avoidOverclaiming": ["do not call all emptiness bad", "do not assume the user wants more decor"]
+  },
+  {
+    "id": "materials_scan",
+    "category": "materials",
+    "observationFocus": "Estimate hard-versus-soft balance and whether the room has tactile softness cues.",
+    "watchFor": ["hard surface dominance", "few textiles", "natural material base", "soft layers missing"],
+    "avoidOverclaiming": ["do not assume touch from appearance alone", "do not overread material quality"]
+  },
+  {
+    "id": "restorative_cues_scan",
+    "category": "restorative_cues",
+    "observationFocus": "Check whether the room visibly cues decompression or only function.",
+    "watchFor": ["low warm light", "soft visual landing point", "bedside calming cues", "clear transition into rest"],
+    "avoidOverclaiming": ["do not claim full emotional outcome", "do not confuse minimalism with restoration"]
+  }
+]

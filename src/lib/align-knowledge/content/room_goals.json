@@ -1,0 +1,34 @@
+[
+  {
+    "roomType": "bedroom",
+    "goal": "sleep",
+    "priorities": ["decompression", "softness", "privacy", "night rhythm", "clear rest cue"],
+    "supportSignals": ["low warm light", "soft bedside zone", "reduced visual alertness", "held feeling"],
+    "cautionSignals": ["bright overhead dominance", "unfinished wall pressure", "work-like cues near bed"],
+    "defaultActionBias": ["restore first", "reduce stimulation before adding variety", "favor low-cost evening cues"]
+  },
+  {
+    "roomType": "bedroom",
+    "goal": "stress",
+    "priorities": ["groundedness", "emotional ease", "soft transitions", "reduced sensory friction"],
+    "supportSignals": ["quiet surfaces", "warmth", "clear recovery pocket"],
+    "cautionSignals": ["hard contrast", "frozen emptiness", "too many active cues"],
+    "defaultActionBias": ["soften one pressure zone", "create one calmer pocket"]
+  },
+  {
+    "roomType": "workspace",
+    "goal": "focus",
+    "priorities": ["clarity", "readable structure", "clean focal lane", "controlled stimulation"],
+    "supportSignals": ["one strong work anchor", "good daylight or balanced light", "reduced visual competition"],
+    "cautionSignals": ["split use zones", "visual drag", "unclear focal point"],
+    "defaultActionBias": ["protect clarity first", "remove drag before adding decor"]
+  },
+  {
+    "roomType": "living_room",
+    "goal": "stress",
+    "priorities": ["ease", "breathability", "soft social calm", "transition out of alertness"],
+    "supportSignals": ["layered warm light", "soft landing points", "clear conversation or rest zone"],
+    "cautionSignals": ["stark top light", "dead blank zone", "overfilled sightlines"],
+    "defaultActionBias": ["soften the room's hardest visible edge", "build one clearer restorative cue"]
+  }
+]

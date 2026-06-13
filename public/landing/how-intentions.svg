@@ -1,0 +1,18 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#F2EDE3"/>
+  <rect x="114" y="92" width="972" height="616" rx="40" fill="#FBF8F2"/>
+  <rect x="172" y="152" width="356" height="496" rx="28" fill="#EFE7DA"/>
+  <rect x="564" y="152" width="466" height="224" rx="28" fill="#E9E1D4"/>
+  <rect x="564" y="404" width="466" height="244" rx="28" fill="#E9E1D4"/>
+  <rect x="220" y="212" width="260" height="86" rx="20" fill="#879A7F"/>
+  <rect x="220" y="326" width="260" height="86" rx="20" fill="#D4A783"/>
+  <rect x="220" y="440" width="260" height="86" rx="20" fill="#B7C3AE"/>
+  <rect x="220" y="554" width="260" height="54" rx="16" fill="#D9D2C5"/>
+  <circle cx="796" cy="264" r="84" fill="#B7C3AE"/>
+  <path d="M796 214V314M746 264H846" stroke="#FBF8F2" stroke-width="14" stroke-linecap="round"/>
+  <rect x="626" y="460" width="148" height="20" rx="10" fill="#CFC6B6"/>
+  <rect x="626" y="502" width="262" height="16" rx="8" fill="#CFC6B6"/>
+  <rect x="626" y="536" width="224" height="16" rx="8" fill="#CFC6B6"/>
+  <rect x="626" y="570" width="284" height="16" rx="8" fill="#CFC6B6"/>
+  <text x="176" y="126" fill="#6E796C" font-family="Arial, sans-serif" font-size="28" font-weight="700">GOAL SETUP</text>
+</svg>

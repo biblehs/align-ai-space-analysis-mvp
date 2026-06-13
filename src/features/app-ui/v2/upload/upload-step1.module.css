@@ -1,0 +1,615 @@
+.page {
+  --surface: #fffcf7;
+  --surface-low: #fcf9f3;
+  --surface-high: #eae8de;
+  --text: #383831;
+  --text-soft: #65655c;
+  --primary: #6a5b56;
+  --primary-soft: #f3ded7;
+  --accent-clay: #d7c0b7;
+  --accent-sage: #dbe5ce;
+  min-height: 100vh;
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--font-editorial-body), sans-serif;
+}
+
+.page :global(*) {
+  box-sizing: border-box;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 16px 28px;
+  background: linear-gradient(180deg, rgb(248 244 236 / 0.98) 0%, rgb(252 249 243 / 0.92) 72%, rgb(255 252 247 / 0.82) 100%);
+  border-bottom: 1px solid rgb(186 186 176 / 0.08);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(56 56 49 / 0.9);
+  text-decoration: none;
+  font-family: var(--font-editorial-serif), serif;
+  font-size: 1.08rem;
+  font-style: italic;
+}
+
+.navSecondaryLink {
+  color: rgb(56 56 49 / 0.62);
+  text-decoration: none;
+  font-family: var(--font-editorial-serif), serif;
+  font-size: 0.92rem;
+  transition: color 180ms ease;
+}
+
+.navSecondaryLink:hover {
+  color: var(--text);
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.navStepLabel {
+  color: rgb(106 91 86 / 0.54);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.navUtilityLink {
+  color: rgb(56 56 49 / 0.5);
+  text-decoration: none;
+  font-family: var(--font-editorial-body), sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.navUtilityLink:hover {
+  color: var(--text);
+}
+
+.main {
+  width: min(1280px, calc(100vw - 48px));
+  margin: 0 auto;
+  padding: 28px 0 110px;
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 0 18px;
+  text-align: center;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  justify-self: start;
+  color: rgb(106 91 86 / 0.7);
+  text-decoration: none;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.backLink:hover {
+  color: var(--text);
+}
+
+.heroTopSpacer {
+  width: 1px;
+  justify-self: end;
+}
+
+.progressHeader {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.progressText,
+.sectionEyebrow,
+.footerEyebrow {
+  color: rgb(106 91 86 / 0.54);
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.progressTrack {
+  width: 108px;
+  height: 2px;
+  background: rgb(186 186 176 / 0.24);
+  overflow: hidden;
+}
+
+.progressFill {
+  width: 34%;
+  height: 100%;
+  background: var(--primary);
+}
+
+.heroTitle,
+.intentTitle {
+  margin: 0;
+  font-family: var(--font-editorial-serif), serif;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.97;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 5vw, 4.95rem);
+  color: var(--primary);
+}
+
+.heroTitle span {
+  font-style: italic;
+}
+
+.heroCopy {
+  max-width: 34rem;
+  margin: 14px auto 0;
+  color: #7a786f;
+  font-size: 0.96rem;
+  line-height: 1.66;
+}
+
+.spaceSection {
+  padding: 6px 0 52px;
+}
+
+.spaceGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.spaceCard {
+  position: relative;
+  min-height: 360px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 28px;
+  background: #f6f4ec;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.spaceCardSelected {
+  border-color: rgb(106 91 86 / 0.34);
+  box-shadow: 0 22px 48px rgb(56 56 49 / 0.1);
+}
+
+.spaceImage,
+.spaceOverlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.spaceImage {
+  object-fit: cover;
+  transition: transform 900ms cubic-bezier(0.22, 1, 0.36, 1), filter 300ms ease;
+}
+
+.spaceCard:hover .spaceImage,
+.spaceCard:focus-visible .spaceImage {
+  transform: scale(1.08);
+}
+
+.spaceOverlay {
+  background: linear-gradient(180deg, rgb(0 0 0 / 0.03), rgb(0 0 0 / 0.58));
+}
+
+.spaceContent {
+  position: absolute;
+  inset: auto 22px 24px;
+  z-index: 1;
+}
+
+.spaceLabel {
+  display: block;
+  margin-bottom: 8px;
+  color: rgb(255 255 255 / 0.68);
+  font-size: 0.56rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+}
+
+.spaceTitle {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-editorial-serif), serif;
+  font-size: 1.74rem;
+  font-weight: 400;
+  line-height: 1.02;
+}
+
+.selectionBadge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid rgb(255 255 255 / 0.82);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.12);
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.selectionBadgeActive {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.selectionDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.intentSection {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 14px 0 10px;
+  text-align: center;
+}
+
+.intentTitle {
+  font-size: clamp(2.3rem, 4vw, 3.45rem);
+  color: #4c4944;
+}
+
+.intentSubtitle {
+  margin: 14px 0 0;
+  color: rgb(101 101 92 / 0.74);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.intentGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 20px;
+  margin-top: 28px;
+}
+
+.intentCard {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  min-height: 96px;
+  padding: 20px 22px;
+  border: 1px solid rgb(186 186 176 / 0.12);
+  border-radius: 28px;
+  background: #f8f4ec;
+  box-shadow: 0 20px 42px rgb(56 56 49 / 0.045);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 90ms ease, box-shadow 90ms ease, border-color 60ms ease, color 60ms ease;
+}
+
+.intentCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 24px 48px rgb(56 56 49 / 0.06);
+}
+
+.intentSelected {
+  border-color: transparent;
+  background: #6a5b56;
+  color: #fff6f3;
+  box-shadow: 0 24px 54px rgb(106 91 86 / 0.18);
+}
+
+.intentSelected:hover {
+  transform: translateY(-2px);
+  border-color: transparent;
+  background: #6a5b56;
+  color: #fff6f3;
+  box-shadow: 0 24px 54px rgb(106 91 86 / 0.18);
+}
+
+.intentIconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.74);
+  flex: 0 0 auto;
+  transition: background-color 60ms ease;
+}
+
+.intentSelected .intentIconWrap {
+  background: rgb(255 255 255 / 0.12);
+}
+
+.intentIcon {
+  color: var(--primary);
+  transition: color 60ms ease;
+}
+
+.intentSelected .intentIcon {
+  color: #fff6f3;
+}
+
+.intentCopy {
+  display: grid;
+  gap: 4px;
+}
+
+.intentCopy strong {
+  font-size: 1.04rem;
+  font-weight: 500;
+}
+
+.intentCopy small {
+  color: rgb(101 101 92 / 0.74);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  transition: color 60ms ease;
+}
+
+.intentSelected .intentCopy small {
+  color: rgb(255 246 243 / 0.72);
+}
+
+.intentSage .intentIconWrap {
+  background: #f0f6e2;
+}
+
+.intentRose .intentIconWrap {
+  background: #f3ded7;
+}
+
+.intentOlive .intentIconWrap {
+  background: #e2e8d4;
+}
+
+.intentPlain .intentIconWrap {
+  background: #efece5;
+}
+
+.actionGroup {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  margin-top: 42px;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 0 28px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff6f3;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-1px);
+}
+
+.primaryButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.56;
+  transform: none;
+}
+
+.skipLink {
+  color: rgb(101 101 92 / 0.56);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 0.32rem;
+}
+
+.footer {
+  background: var(--surface-low);
+}
+
+.footerTop {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) auto;
+  gap: 36px;
+  width: min(1120px, calc(100vw - 48px));
+  margin: 0 auto;
+  padding: 62px 0 40px;
+}
+
+.footerBrandBlock {
+  max-width: 320px;
+}
+
+.footerEyebrow {
+  margin: 0 0 14px;
+}
+
+.footerBrandCopy {
+  margin-top: 16px;
+  color: rgb(101 101 92 / 0.82);
+  font-size: 0.88rem;
+  line-height: 1.72;
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 20px;
+  padding-top: 8px;
+}
+
+.footerLink {
+  color: rgb(56 56 49 / 0.68);
+  text-decoration: none;
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: color 180ms ease;
+}
+
+.footerLink:hover {
+  color: var(--text);
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  width: min(1120px, calc(100vw - 48px));
+  margin: 0 auto;
+  padding: 18px 0 28px;
+  border-top: 1px solid rgb(186 186 176 / 0.1);
+  color: rgb(101 101 92 / 0.82);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1100px) {
+  .spaceGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footerTop {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav {
+    padding: 12px 16px;
+  }
+
+  .navStepLabel {
+    display: none;
+  }
+
+  .main,
+  .footerTop,
+  .footerBottom {
+    width: calc(100vw - 28px);
+  }
+
+  .main {
+    padding-top: 24px;
+    padding-bottom: 84px;
+  }
+
+  .topRow {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-bottom: 16px;
+  }
+
+  .backLink {
+    justify-self: start;
+  }
+
+  .heroTopSpacer {
+    display: none;
+  }
+
+  .heroTitle {
+    font-size: clamp(2.55rem, 12vw, 3.7rem);
+  }
+
+  .heroCopy {
+    max-width: 18rem;
+    font-size: 0.92rem;
+    line-height: 1.62;
+  }
+
+  .spaceGrid,
+  .intentGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .spaceCard {
+    min-height: 300px;
+  }
+
+  .spaceTitle {
+    font-size: 1.7rem;
+  }
+
+  .intentTitle {
+    font-size: clamp(1.95rem, 8.8vw, 2.7rem);
+  }
+
+  .intentCard {
+    min-height: 76px;
+    padding: 16px 18px;
+  }
+
+  .primaryButton {
+    width: 100%;
+  }
+
+  .footerTop {
+    padding: 46px 0 28px;
+  }
+
+  .footerLinks {
+    justify-content: flex-start;
+    gap: 16px;
+    padding-top: 0;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

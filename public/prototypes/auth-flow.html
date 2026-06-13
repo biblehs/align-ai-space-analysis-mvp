@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALIGN Auth Flow Prototype</title>
+    <link rel="stylesheet" href="/prototypes/prototype.css" />
+    <script src="https://mcp.figma.com/mcp/html-to-design/capture.js" async></script>
+  </head>
+  <body>
+    <div class="prototype-shell">
+      <div class="prototype-header">
+        <div class="prototype-brand">
+          <span class="prototype-brand-mark"></span>
+          ALIGN Prototype
+        </div>
+        <div class="prototype-nav">
+          <a class="prototype-link is-active" href="/prototypes/auth-flow.html">Auth Flow</a>
+          <a class="prototype-link" href="/prototypes/account-center.html">Account Center</a>
+        </div>
+      </div>
+
+      <div class="canvas-stack">
+        <div class="frame-block" id="auth-default">
+          <div class="frame-label-row">
+            <div class="frame-label">Auth Flow / Desktop / Default</div>
+            <div class="frame-meta">1440-wide branded sign-in view</div>
+          </div>
+          <section class="frame desktop">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+              </div>
+              <div class="browser-url"></div>
+              <div class="browser-pill">Preview</div>
+            </div>
+
+            <div class="topbar">
+              <div class="logo"><span class="logo-mark"></span>ALIGN</div>
+              <div class="nav">
+                <span>About</span>
+                <span>Pricing</span>
+                <span class="nav-pill">Account</span>
+              </div>
+            </div>
+
+            <div class="two-panel">
+              <div class="brand-panel">
+                <div class="brand-eyebrow">
+                  <span class="prototype-brand-mark"></span>
+                  Space Wellness Access
+                </div>
+                <h1 class="brand-title">
+                  Keep your <span class="soft">room readings</span> and return to what changed.
+                </h1>
+                <p class="brand-copy">
+                  Sign in to revisit your snapshots, keep your restorative space history, and receive thoughtful product updates without losing momentum.
+                </p>
+
+                <div class="brand-stats">
+                  <div class="stat-card">
+                    <strong>Saved room readings</strong>
+                    <span>Return to past analyses and compare your spaces over time.</span>
+                  </div>
+                  <div class="stat-card">
+                    <strong>Wellness-focused history</strong>
+                    <span>Keep your rituals, score shifts, and upgrade recommendations in one place.</span>
+                  </div>
+                  <div class="stat-card">
+                    <strong>Low-friction access</strong>
+                    <span>Use email or Google and continue from the exact room you were working on.</span>
+                  </div>
+                </div>
+
+                <div class="focus-card">
+                  <h4>For returning users</h4>
+                  <p>Access your latest room reading, spot your strongest shift, and keep building a calmer environment without starting over.</p>
+                </div>
+              </div>
+
+              <div class="auth-panel">
+                <div>
+                  <div class="mode-row">
+                    <div class="mode-badge normal">Live account access</div>
+                  </div>
+                  <h2 class="auth-heading">Sign in to your personal space archive.</h2>
+                  <p class="auth-subtitle">
+                    Save your reports, revisit paid plans, and keep receiving low-cost, wellness-led upgrade suggestions when you opt in.
+                  </p>
+
+                  <div class="field">
+                    <label class="field-label">Email</label>
+                    <div class="input">you@example.com</div>
+                  </div>
+
+                  <div class="consent">
+                    <div class="consent-mark"></div>
+                    <div>
+                      I want launch updates, gentle product news, and occasional wellness design notes by email.
+                    </div>
+                  </div>
+
+                  <a class="button button-primary" href="#auth-success">Continue with Email</a>
+
+                  <div class="divider"><span>or</span></div>
+
+                  <a class="button button-secondary" href="/prototypes/account-center.html#account-overview">Continue with Google</a>
+                </div>
+
+                <div class="footer-note">
+                  <span>Private by default</span>
+                  <span>Built for focus, rest, and gentle routines</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="frame-block" id="auth-states">
+          <div class="frame-label-row">
+            <div class="frame-label">Auth Flow / Desktop / Success + Test + Error</div>
+            <div class="frame-meta">State-driven variants for product review</div>
+          </div>
+          <section class="frame desktop">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+                <span class="browser-dot"></span>
+              </div>
+              <div class="browser-url"></div>
+              <div class="browser-pill">States</div>
+            </div>
+
+            <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;height:calc(100% - 58px);">
+              <div class="auth-panel">
+                <div>
+                  <div class="mode-row">
+                    <div class="mode-badge normal">Email submitted</div>
+                  </div>
+                  <h2 class="auth-heading">Check your inbox.</h2>
+                  <p class="auth-subtitle">A secure sign-in link is on the way. Open it on this device to continue to your space archive.</p>
+                  <div class="helper-line success">
+                    Sign-in link sent to <strong>hello@alignflow.xyz</strong>. Most users arrive back in under a minute.
+                  </div>
+                  <div class="field">
+                    <label class="field-label">Email</label>
+                    <div class="input">hello@alignflow.xyz</div>
+                  </div>
+                  <a class="button button-primary" href="#auth-success">Resend link</a>
+                </div>
+                <div class="footer-note">
+                  <span>Email magic link</span>
+                  <span>Redirects to account center</span>
+                </div>
+              </div>
+
+              <div class="auth-panel">
+                <div>
+                  <div class="mode-row">
+                    <div class="mode-badge test">Browser test mode</div>
+                  </div>
+                  <h2 class="auth-heading">Test the flow instantly.</h2>
+                  <p class="auth-subtitle">When live auth is unavailable, ALIGN can preview the account journey in-browser so the UX still feels intentional.</p>
+                  <div class="helper-line info">
+                    Local Test Mode is active. Email and Google simulate sign-in only in this browser.
+                  </div>
+                  <div class="field">
+                    <label class="field-label">Email</label>
+                    <div class="input">support@alignflow.xyz</div>
+                  </div>
+                  <a class="button button-primary" href="/prototypes/account-center.html#account-overview">Continue with Email (Test)</a>
+                  <div class="divider"><span>or</span></div>
+                  <a class="button button-secondary" href="/prototypes/account-center.html#account-overview">Continue with Google (Test)</a>
+                </div>
+                <div class="footer-note">
+                  <span>No backend dependency</span>
+                  <span>For product review and demos</span>
+                </div>
+              </div>
+
+              <div class="auth-panel">
+                <div>
+                  <div class="mode-row">
+                    <div class="mode-badge normal">Error state</div>
+                  </div>
+                  <h2 class="auth-heading">We couldn’t complete sign-in.</h2>
+                  <p class="auth-subtitle">The language stays calm and product-like. Errors should feel guided, not alarming.</p>
+                  <div class="helper-line error">
+                    We couldn’t verify this email request. Please try again or continue with Google.
+                  </div>
+                  <div class="field">
+                    <label class="field-label">Email</label>
+                    <div class="input">hello@alignflow.xyz</div>
+                  </div>
+                  <a class="button button-primary" href="#auth-default">Try Email Again</a>
+                  <div class="divider"><span>or</span></div>
+                  <a class="button button-secondary" href="/prototypes/account-center.html#account-overview">Continue with Google</a>
+                </div>
+                <div class="footer-note">
+                  <span>Soft failure treatment</span>
+                  <span>No system-alert styling</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="frame-block" id="auth-mobile">
+          <div class="frame-label-row">
+            <div class="frame-label">Auth Flow / Mobile</div>
+            <div class="frame-meta">Primary mobile entry experience</div>
+          </div>
+          <div class="mobile-row">
+            <section class="frame mobile">
+              <div class="mobile-auth">
+                <div class="mobile-top">
+                  <div class="logo" style="font-size:20px;"><span class="logo-mark"></span>ALIGN</div>
+                  <div class="mobile-chip">Account</div>
+                </div>
+                <div class="brand-eyebrow">
+                  <span class="prototype-brand-mark"></span>
+                  Sign in
+                </div>
+                <h1 class="mobile-title">Keep your space history with you.</h1>
+                <p class="mobile-copy">
+                  Return to snapshots, unlock saved reports, and keep product updates close without losing your current room journey.
+                </p>
+
+                <div class="mini-points">
+                  <div class="mini-point">
+                    <strong>Saved room readings</strong>
+                    <span>Track earlier analyses and score changes.</span>
+                  </div>
+                  <div class="mini-point">
+                    <strong>Low-friction access</strong>
+                    <span>Email or Google in a few steps.</span>
+                  </div>
+                </div>
+
+                <div class="helper-line info">Local Test Mode is active in this preview.</div>
+
+                <div class="field">
+                  <label class="field-label">Email</label>
+                  <div class="input">you@example.com</div>
+                </div>
+                <div class="consent">
+                  <div class="consent-mark"></div>
+                  <div>I want launch updates and occasional wellness design notes.</div>
+                </div>
+                <a class="button button-primary" href="/prototypes/account-center.html#account-mobile">Continue with Email (Test)</a>
+                <div class="divider"><span>or</span></div>
+                <a class="button button-secondary" href="/prototypes/account-center.html#account-mobile">Continue with Google (Test)</a>
+              </div>
+            </section>
+
+            <section class="frame mobile">
+              <div class="mobile-auth">
+                <div class="mobile-top">
+                  <div class="logo" style="font-size:20px;"><span class="logo-mark"></span>ALIGN</div>
+                  <div class="mobile-chip">Email sent</div>
+                </div>
+                <h1 class="mobile-title">Check your inbox.</h1>
+                <p class="mobile-copy">
+                  Open the secure sign-in link on this device to continue to your saved space center.
+                </p>
+                <div class="helper-line success">Magic link sent to hello@alignflow.xyz</div>
+                <div class="mini-points">
+                  <div class="mini-point">
+                    <strong>What happens next</strong>
+                    <span>You return directly to your account home and latest report summary.</span>
+                  </div>
+                </div>
+                <a class="button button-primary" href="#auth-mobile">Resend link</a>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

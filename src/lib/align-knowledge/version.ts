@@ -1,0 +1,1 @@
+export const ALIGN_KNOWLEDGE_VERSION = "2026-04-07.kb.v1";

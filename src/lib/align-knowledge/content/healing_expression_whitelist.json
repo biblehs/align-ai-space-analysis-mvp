@@ -1,0 +1,93 @@
+{
+  "snapshot": {
+    "allowedRoles": [
+      "type naming",
+      "one-line reading",
+      "brief state translation",
+      "tonight shift explanation",
+      "cta transition line"
+    ],
+    "preferredPhrases": [
+      "hold your rest",
+      "settle more fully",
+      "clearer cue for rest",
+      "more held",
+      "more settled",
+      "restorative cue",
+      "soften the room",
+      "let the room exhale"
+    ],
+    "sentencePatterns": [
+      "The calm is here, but the deeper settling has not fully arrived yet.",
+      "The room already feels quieter; it is not yet fully supporting rest.",
+      "This shift helps the room feel less alert and more able to hold rest."
+    ],
+    "avoidPatterns": [
+      "healing energy is blocked",
+      "the room has low frequency",
+      "the room is spiritually misaligned",
+      "the space is not healing enough"
+    ]
+  },
+  "fullReport": {
+    "allowedRoles": [
+      "deeper reading opening",
+      "hidden drains translation",
+      "action-plan explanation",
+      "constraint-based reassurance",
+      "closing reflection"
+    ],
+    "preferredPhrases": [
+      "restorative base",
+      "more room to settle",
+      "softer support",
+      "visual landing point",
+      "a room that can hold rest more steadily",
+      "a clearer signal that rest begins here"
+    ],
+    "sentencePatterns": [
+      "The room is not only asking for order; it is asking for softer support.",
+      "What is missing is not more effort everywhere, but one clearer restorative cue.",
+      "The room already carries some calm, but it still needs help to hold recovery more steadily."
+    ],
+    "avoidPatterns": [
+      "your room is healing you",
+      "the space is clearing your trauma",
+      "this room will restore your nervous system",
+      "the room's frequency is rising"
+    ]
+  },
+  "progressReport": {
+    "allowedRoles": [
+      "progress summary",
+      "what worked reflection",
+      "encouraging reinforcement line",
+      "next-phase framing"
+    ],
+    "preferredPhrases": [
+      "more settled than before",
+      "the room is starting to hold rest more clearly",
+      "the change is beginning to stick",
+      "this part is now supporting you more steadily",
+      "keep the room from slipping back into alertness"
+    ],
+    "sentencePatterns": [
+      "The room now feels more settled than it did before.",
+      "This change is beginning to hold, even if it is not fully stable yet.",
+      "You have already reduced one layer of tension; the next step is to keep that support in place."
+    ],
+    "avoidPatterns": [
+      "the room is fully healed",
+      "your energy has been transformed",
+      "the room is curing the problem",
+      "all resistance has cleared"
+    ]
+  },
+  "universalGuards": [
+    "Healing language may translate a conclusion, but it must not serve as evidence.",
+    "Do not introduce any unseen objects, structural assumptions, or psychological claims.",
+    "If a healing phrase is removed, the report should still remain logically valid.",
+    "Prefer one restrained line of warmth over multiple poetic lines.",
+    "Never let healing language overpower the action path."
+  ]
+}

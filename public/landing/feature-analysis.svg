@@ -1,0 +1,19 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="900" fill="#ECE6DA"/>
+  <rect x="116" y="96" width="1168" height="708" rx="42" fill="#F9F5EE"/>
+  <rect x="188" y="176" width="620" height="468" rx="34" fill="#E2DACC"/>
+  <rect x="850" y="176" width="362" height="220" rx="30" fill="#F2ECE2"/>
+  <rect x="850" y="424" width="362" height="220" rx="30" fill="#F2ECE2"/>
+  <rect x="258" y="566" width="468" height="46" rx="20" fill="#F7F2EA"/>
+  <circle cx="456" cy="382" r="138" fill="#B7C3AE"/>
+  <rect x="906" y="234" width="176" height="20" rx="10" fill="#CEC5B6"/>
+  <rect x="906" y="272" width="236" height="16" rx="8" fill="#CEC5B6"/>
+  <rect x="906" y="302" width="208" height="16" rx="8" fill="#CEC5B6"/>
+  <rect x="906" y="482" width="176" height="20" rx="10" fill="#CEC5B6"/>
+  <rect x="906" y="520" width="236" height="16" rx="8" fill="#CEC5B6"/>
+  <rect x="906" y="550" width="208" height="16" rx="8" fill="#CEC5B6"/>
+  <path d="M342 612L418 452L502 540L560 436L646 612" fill="#879A7F"/>
+  <circle cx="1072" cy="692" r="86" fill="#D4A783"/>
+  <path d="M1072 644V740M1024 692H1120" stroke="#F9F5EE" stroke-width="16" stroke-linecap="round"/>
+  <text x="188" y="142" fill="#6E796C" font-family="Arial, sans-serif" font-size="30" font-weight="700">AI SPATIAL ANALYSIS</text>
+</svg>

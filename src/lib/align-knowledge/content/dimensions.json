@@ -1,0 +1,56 @@
+[
+  {
+    "key": "calm",
+    "label": "Calm",
+    "definition": "How quiet, settled, and low-friction the room feels at first glance.",
+    "positiveSignals": ["low visual noise", "soft light behavior", "clean surface rhythm", "few competing focal points"],
+    "negativeSignals": ["harsh glare", "busy surfaces", "too many small items", "jagged contrast jumps"],
+    "commonActions": ["reduce visual competition", "soften the strongest light source", "protect one calmer surface"],
+    "oftenConfusedWith": ["clarity", "restoration"]
+  },
+  {
+    "key": "clarity",
+    "label": "Clarity",
+    "definition": "How legible, coherent, and easy to read the room feels.",
+    "positiveSignals": ["clear focal point", "readable layout", "purposeful grouping", "obvious use zone"],
+    "negativeSignals": ["mixed signals", "unclear focal area", "overlapping functions", "attention pulled in many directions"],
+    "commonActions": ["strengthen one visual anchor", "remove one competing object cluster", "protect the clearest lane"],
+    "oftenConfusedWith": ["calm", "grounding"]
+  },
+  {
+    "key": "grounding",
+    "label": "Grounding",
+    "definition": "How physically settled, stable, and anchored the room feels in the body.",
+    "positiveSignals": ["stable visual base", "coherent furniture weight", "low visual float", "natural material presence"],
+    "negativeSignals": ["floating emptiness", "overly top-heavy emphasis", "weak anchor zone", "thin material depth"],
+    "commonActions": ["strengthen a low anchor", "add one stable zone", "use heavier-feeling natural cues sparingly"],
+    "oftenConfusedWith": ["warmth", "calm"]
+  },
+  {
+    "key": "warmth",
+    "label": "Warmth",
+    "definition": "How softened, human, and emotionally welcoming the room feels.",
+    "positiveSignals": ["warm light", "soft material layers", "gentle tonal transitions", "less hard-edge dominance"],
+    "negativeSignals": ["cold functional light", "hard surfaces only", "stark contrast", "bare walls with no softness"],
+    "commonActions": ["introduce a softer light layer", "add one textile or low-contrast visual landing point", "reduce hard-edge dominance"],
+    "oftenConfusedWith": ["restoration", "grounding"]
+  },
+  {
+    "key": "openness",
+    "label": "Openness",
+    "definition": "How breathable, spacious, and easy to move through the room feels.",
+    "positiveSignals": ["clear circulation", "visual breathing room", "space around key furniture", "not overfilled"],
+    "negativeSignals": ["crowding", "compressed paths", "visual pile-up", "empty but unresolved voids"],
+    "commonActions": ["protect a breathing lane", "clear one surface or path", "convert unresolved emptiness into a calmer landing point"],
+    "oftenConfusedWith": ["calm", "clarity"]
+  },
+  {
+    "key": "restoration",
+    "label": "Restoration",
+    "definition": "How clearly the room cues slowing down, recovery, and nervous-system downshifting.",
+    "positiveSignals": ["low warm light", "soft landing points", "rest-oriented cues", "gentle rhythm and reduced stimulation"],
+    "negativeSignals": ["nighttime glare", "unfinished tension zones", "functional but unsoftened space", "weak decompression cues"],
+    "commonActions": ["start with one restorative cue", "reduce the strongest night stimulus", "build a clearer rest signal before broader change"],
+    "oftenConfusedWith": ["warmth", "calm"]
+  }
+]

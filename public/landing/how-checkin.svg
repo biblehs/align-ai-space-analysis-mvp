@@ -1,0 +1,17 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#EFE8DC"/>
+  <rect x="120" y="96" width="960" height="608" rx="40" fill="#FAF7F1"/>
+  <rect x="190" y="160" width="320" height="480" rx="28" fill="#EEE6D9"/>
+  <rect x="540" y="160" width="470" height="140" rx="28" fill="#EEE6D9"/>
+  <rect x="540" y="332" width="470" height="308" rx="28" fill="#F4EFE7"/>
+  <circle cx="350" cy="286" r="78" fill="#B7C3AE"/>
+  <path d="M316 286L342 312L390 258" stroke="#FAF7F1" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="250" y="430" width="200" height="18" rx="9" fill="#D2CAB9"/>
+  <rect x="250" y="468" width="160" height="14" rx="7" fill="#D2CAB9"/>
+  <rect x="250" y="496" width="184" height="14" rx="7" fill="#D2CAB9"/>
+  <path d="M614 544C648 486 702 442 774 420C845 399 899 344 928 268" stroke="#879A7F" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="614" cy="544" r="18" fill="#879A7F"/>
+  <circle cx="774" cy="420" r="18" fill="#D4A783"/>
+  <circle cx="928" cy="268" r="18" fill="#B7C3AE"/>
+  <text x="182" y="132" fill="#6E796C" font-family="Arial, sans-serif" font-size="28" font-weight="700">PROGRESS CHECK-IN</text>
+</svg>

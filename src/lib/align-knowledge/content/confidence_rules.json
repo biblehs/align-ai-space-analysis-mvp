@@ -1,0 +1,32 @@
+[
+  {
+    "id": "partial_visibility",
+    "when": "Key room zones are only partially visible or the frame omits major edges of the room.",
+    "effect": "Lower confidence and avoid claiming full room understanding.",
+    "guidance": [
+      "Name the visible zone you are relying on.",
+      "Avoid claiming unseen storage, windows, or room edges.",
+      "Prefer softer wording such as may or appears when needed."
+    ]
+  },
+  {
+    "id": "mixed_use_overlap",
+    "when": "The room appears to serve more than one function at once.",
+    "effect": "Acknowledge overlap rather than forcing one simplistic interpretation.",
+    "guidance": [
+      "Describe the overlap as visible tension.",
+      "Do not overstate certainty about the room's single identity.",
+      "Keep actions focused on the clearest visible zone."
+    ]
+  },
+  {
+    "id": "color_meaning_limit",
+    "when": "Color or tone is being used to support an interpretation.",
+    "effect": "Treat color as a supporting cue, not a diagnostic truth by itself.",
+    "guidance": [
+      "Use color as a modifier alongside light, density, layout, and material signals.",
+      "Avoid claiming universal emotional effects from a hue alone.",
+      "Prefer language about contrast, warmth, softness, and stimulation level."
+    ]
+  }
+]

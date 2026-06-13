@@ -1,0 +1,38 @@
+[
+  {
+    "id": "action_reduce_top_light",
+    "interpretationPattern": "alertness after dark",
+    "roomTypes": ["bedroom", "living_room", "other"],
+    "goals": ["sleep", "stress"],
+    "tonightMoves": ["Switch the dominant evening light away from the highest overhead source.", "Add one lower, warmer cue before changing anything else."],
+    "weekMoves": ["Layer in a second softer light source.", "Reduce the room's dependence on one bright top light at night."],
+    "costLevel": "low"
+  },
+  {
+    "id": "action_anchor_blank_zone",
+    "interpretationPattern": "clean but not yet settled",
+    "roomTypes": ["bedroom", "living_room", "workspace", "other"],
+    "goals": ["sleep", "stress", "focus", "energy"],
+    "tonightMoves": ["Turn the emptiest visible zone into a calmer landing point.", "Give the blankest wall or surface one gentle visual anchor."],
+    "weekMoves": ["Add one low-contrast art piece or soft visual stop.", "Strengthen that zone without filling the whole room."],
+    "costLevel": "low"
+  },
+  {
+    "id": "action_add_soft_layer",
+    "interpretationPattern": "function more than comfort",
+    "roomTypes": ["bedroom", "living_room", "other"],
+    "goals": ["sleep", "stress"],
+    "tonightMoves": ["Add one softer tactile layer near the room's primary recovery zone.", "Choose one small move that increases warmth without adding clutter."],
+    "weekMoves": ["Build one additional textile or material layer around the support zone.", "Let the room feel a little more held before reorganizing it."],
+    "costLevel": "low"
+  },
+  {
+    "id": "action_protect_focus_lane",
+    "interpretationPattern": "attention split",
+    "roomTypes": ["workspace", "bedroom", "living_room"],
+    "goals": ["focus", "energy"],
+    "tonightMoves": ["Protect the clearest lane or work surface first.", "Remove one competing cue before adding anything new."],
+    "weekMoves": ["Separate the cleanest zone more intentionally.", "Keep one surface visibly lighter than the rest."],
+    "costLevel": "zero"
+  }
+]

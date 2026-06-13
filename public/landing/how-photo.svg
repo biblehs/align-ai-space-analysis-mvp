@@ -1,0 +1,17 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#ECE6DA"/>
+  <rect x="88" y="96" width="1024" height="608" rx="36" fill="#F8F4ED"/>
+  <rect x="138" y="146" width="924" height="508" rx="28" fill="#E5DED0"/>
+  <rect x="188" y="194" width="430" height="412" rx="24" fill="#D7D1C5"/>
+  <rect x="672" y="194" width="340" height="252" rx="24" fill="#F5F1EA"/>
+  <rect x="672" y="470" width="340" height="136" rx="24" fill="#F5F1EA"/>
+  <rect x="760" y="248" width="164" height="112" rx="20" fill="#B7C3AE"/>
+  <path d="M244 564C296 474 350 398 416 324C449 362 492 417 544 490L588 564H244Z" fill="#879A7F"/>
+  <circle cx="494" cy="278" r="54" fill="#D4A783"/>
+  <rect x="726" y="514" width="164" height="18" rx="9" fill="#D6CFBE"/>
+  <rect x="726" y="550" width="234" height="14" rx="7" fill="#D6CFBE"/>
+  <rect x="726" y="580" width="194" height="14" rx="7" fill="#D6CFBE"/>
+  <circle cx="962" cy="260" r="28" fill="#E6DED0"/>
+  <path d="M962 230V290M932 260H992" stroke="#8A9A86" stroke-width="8" stroke-linecap="round"/>
+  <text x="154" y="116" fill="#6E796C" font-family="Arial, sans-serif" font-size="28" font-weight="700">PHOTO INPUT</text>
+</svg>

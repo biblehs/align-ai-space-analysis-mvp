@@ -1,0 +1,23 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#ECE7DC"/>
+  <rect x="120" y="98" width="960" height="604" rx="40" fill="#FAF7F0"/>
+  <rect x="188" y="160" width="824" height="124" rx="26" fill="#F0E8DB"/>
+  <rect x="188" y="312" width="824" height="328" rx="26" fill="#F7F3EC"/>
+  <rect x="230" y="192" width="190" height="60" rx="20" fill="#879A7F"/>
+  <rect x="444" y="192" width="190" height="60" rx="20" fill="#D4A783"/>
+  <rect x="658" y="192" width="150" height="60" rx="20" fill="#B8C4AF"/>
+  <rect x="828" y="192" width="140" height="60" rx="20" fill="#D8D1C3"/>
+  <rect x="240" y="350" width="210" height="250" rx="22" fill="#F1EADF"/>
+  <rect x="494" y="350" width="210" height="250" rx="22" fill="#F1EADF"/>
+  <rect x="748" y="350" width="210" height="250" rx="22" fill="#F1EADF"/>
+  <circle cx="345" cy="416" r="36" fill="#879A7F"/>
+  <circle cx="599" cy="416" r="36" fill="#D4A783"/>
+  <circle cx="853" cy="416" r="36" fill="#B8C4AF"/>
+  <rect x="278" y="484" width="134" height="16" rx="8" fill="#D0C8B9"/>
+  <rect x="278" y="518" width="102" height="14" rx="7" fill="#D0C8B9"/>
+  <rect x="532" y="484" width="134" height="16" rx="8" fill="#D0C8B9"/>
+  <rect x="532" y="518" width="102" height="14" rx="7" fill="#D0C8B9"/>
+  <rect x="786" y="484" width="134" height="16" rx="8" fill="#D0C8B9"/>
+  <rect x="786" y="518" width="102" height="14" rx="7" fill="#D0C8B9"/>
+  <text x="184" y="132" fill="#6E796C" font-family="Arial, sans-serif" font-size="28" font-weight="700">ACTION PLAN</text>
+</svg>

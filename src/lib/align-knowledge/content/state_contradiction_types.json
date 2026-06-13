@@ -1,0 +1,123 @@
+[
+  {
+    "id": "rest_blocked_by_ongoing_signals",
+    "label": "Rest Blocked by Ongoing Signals",
+    "roomTypes": ["bedroom"],
+    "goals": ["sleep", "deep_rest", "relax"],
+    "triggerSignals": ["closureSignal:weak", "functionMixing:high", "clutterLevel:high"],
+    "amplifiedStates": ["unfinishedness", "alertness", "carry-over task energy"],
+    "blockedStates": ["rest", "closure", "night-time settling"],
+    "coreConflictTemplate": "The room is still signaling that something is ongoing, so rest never fully takes over.",
+    "topLeverageTemplate": "Reduce the strongest unfinished signal nearest the sleep zone.",
+    "notYet": [
+      "Do not start by styling the room.",
+      "Do not buy decor before the rest zone is protected.",
+      "Do not reorganize the whole room tonight."
+    ],
+    "likelyFirstRelief": [
+      "The room may feel less unfinished.",
+      "It may be easier to slow down once you get into bed.",
+      "The room may feel more like the end of the day."
+    ]
+  },
+  {
+    "id": "rest_blocked_by_unprotected_bed_zone",
+    "label": "Rest Blocked by an Unprotected Bed Zone",
+    "roomTypes": ["bedroom"],
+    "goals": ["sleep", "deep_rest"],
+    "triggerSignals": ["restBoundary:weak", "functionMixing:high", "clutterLevel:medium"],
+    "amplifiedStates": ["multi-use pressure", "task carry-over", "sleep resistance"],
+    "blockedStates": ["deep rest", "being held", "bedtime transition"],
+    "coreConflictTemplate": "The bed is present, but it is not being protected strongly enough as a rest-only zone.",
+    "topLeverageTemplate": "Give the bed its single purpose back before changing anything broader.",
+    "notYet": [
+      "Do not focus on the whole room before the bed feels protected.",
+      "Do not add new objects before the bed zone is simplified."
+    ],
+    "likelyFirstRelief": [
+      "The room may feel less mixed-purpose.",
+      "The bed may read more clearly as a place to stop.",
+      "Your mind may feel slightly less busy at bedtime."
+    ]
+  },
+  {
+    "id": "calm_blocked_by_visual_density",
+    "label": "Calm Blocked by Visual Density",
+    "roomTypes": ["bedroom", "living_room", "workspace", "creative_studio"],
+    "goals": ["calm", "relax", "deep_rest"],
+    "triggerSignals": ["clutterLevel:high", "anchorStrength:weak"],
+    "amplifiedStates": ["visual load", "micro-alertness", "scanning"],
+    "blockedStates": ["calm", "mental quiet", "spaciousness"],
+    "coreConflictTemplate": "The eye is being asked to process too much, so the room cannot fully settle the nervous system.",
+    "topLeverageTemplate": "Reduce the densest visual surface before changing the whole room.",
+    "notYet": [
+      "Do not add decor to a surface that still feels overloaded.",
+      "Do not widen the project before one high-pressure surface is reduced."
+    ],
+    "likelyFirstRelief": [
+      "The room may feel easier to look at.",
+      "Your attention may wander less.",
+      "The space may start to feel quieter without changing much else."
+    ]
+  },
+  {
+    "id": "focus_blocked_by_functional_blur",
+    "label": "Focus Blocked by Functional Blur",
+    "roomTypes": ["workspace", "bedroom", "creative_studio"],
+    "goals": ["focus"],
+    "triggerSignals": ["functionMixing:high", "anchorStrength:weak", "restBoundary:weak"],
+    "amplifiedStates": ["switching cost", "background drag", "attention leakage"],
+    "blockedStates": ["focus", "clarity", "task commitment"],
+    "coreConflictTemplate": "The space is asking the brain to switch roles too often, so focus never fully locks in.",
+    "topLeverageTemplate": "Strengthen one clear work anchor before improving the rest of the room.",
+    "notYet": [
+      "Do not optimize ambiance before the work anchor is clear.",
+      "Do not spread tools across multiple weak zones."
+    ],
+    "likelyFirstRelief": [
+      "The room may feel more directional.",
+      "It may be easier to start one task without drifting.",
+      "The space may feel less split between modes."
+    ]
+  },
+  {
+    "id": "recovery_blocked_by_harsh_light_rhythm",
+    "label": "Recovery Blocked by Harsh Light Rhythm",
+    "roomTypes": ["bedroom", "living_room", "workspace"],
+    "goals": ["sleep", "deep_rest", "calm"],
+    "triggerSignals": ["lightRhythm:weak"],
+    "amplifiedStates": ["alertness", "brightness pressure", "daytime carry-over"],
+    "blockedStates": ["recovery", "soft landing", "evening closure"],
+    "coreConflictTemplate": "The room does not shift its light rhythm clearly enough, so the body stays more alert than the goal requires.",
+    "topLeverageTemplate": "Lower and soften the dominant evening light before doing anything decorative.",
+    "notYet": [
+      "Do not start with styling if the room still feels overlit at night.",
+      "Do not rely on one bright ceiling source to do every job."
+    ],
+    "likelyFirstRelief": [
+      "The room may feel less sharp.",
+      "The transition into evening may feel more obvious.",
+      "Your body may find it easier to slow down."
+    ]
+  },
+  {
+    "id": "safety_blocked_by_unheld_space",
+    "label": "Safety Blocked by Unheld Space",
+    "roomTypes": ["bedroom", "living_room", "corner"],
+    "goals": ["calm", "deep_rest", "relax"],
+    "triggerSignals": ["softness:weak", "anchorStrength:weak"],
+    "amplifiedStates": ["exposure", "suspension", "thinness"],
+    "blockedStates": ["safety", "grounding", "being held"],
+    "coreConflictTemplate": "The room may be clean and quiet, but it is not holding the body with enough softness or anchor.",
+    "topLeverageTemplate": "Build one stronger point of support before trying to make the whole room feel warmer.",
+    "notYet": [
+      "Do not add many small accents before the room has one clear anchor.",
+      "Do not confuse emptiness with calm."
+    ],
+    "likelyFirstRelief": [
+      "The room may feel less exposed.",
+      "It may feel easier to stay in the space without hovering.",
+      "The space may start to feel more settled."
+    ]
+  }
+]

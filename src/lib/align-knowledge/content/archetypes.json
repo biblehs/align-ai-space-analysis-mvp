@@ -1,0 +1,20 @@
+[
+  {
+    "id": "still_water",
+    "name": "Still Water",
+    "coreQuality": "Composed on the surface, with tension still held underneath.",
+    "commonTension": ["under-restored calm", "cold functional lighting", "space feels orderly but not settled"],
+    "commonSignals": ["bare or under-claimed wall zones", "quiet room with one unresolved pressure point", "supportive base but weak recovery cue"],
+    "strongestWeakestPatterns": ["calm high / restoration low", "openness high / warmth low"],
+    "suggestionDirections": ["start with one restorative cue", "soften the clearest pressure zone", "add warmth without adding clutter"]
+  },
+  {
+    "id": "rising_wood",
+    "name": "Rising Wood",
+    "coreQuality": "Clear, forward-moving, and structurally supportive for focus.",
+    "commonTension": ["good structure but overstimulation risk", "clarity strong but warmth thin"],
+    "commonSignals": ["bright room", "clear desk or work lane", "strong vertical energy"],
+    "strongestWeakestPatterns": ["clarity high / warmth low", "focus high / restoration medium"],
+    "suggestionDirections": ["protect the focus lane", "add warmth without sacrificing clarity", "reduce one source of visual drag"]
+  }
+]

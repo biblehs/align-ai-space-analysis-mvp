@@ -1,0 +1,30 @@
+[
+  {
+    "id": "obs_to_rest_signal",
+    "observationPattern": "harsh overhead light plus weak low-light layering",
+    "means": "The room may still be broadcasting alertness after dark.",
+    "affects": ["restoration", "warmth", "calm"],
+    "userTranslation": "It can feel like the room never fully tells your body to slow down."
+  },
+  {
+    "id": "obs_to_unfinished_zone",
+    "observationPattern": "large bare wall or unresolved empty area",
+    "means": "The room may feel clean but not yet settled.",
+    "affects": ["warmth", "restoration", "openness"],
+    "userTranslation": "It can feel like one part of the room is still hanging open."
+  },
+  {
+    "id": "obs_to_softness_gap",
+    "observationPattern": "hard surfaces dominate and soft layers are scarce",
+    "means": "The room may support function more than comfort.",
+    "affects": ["warmth", "grounding", "restoration"],
+    "userTranslation": "It can feel usable, but not especially held or softened."
+  },
+  {
+    "id": "obs_to_focus_split",
+    "observationPattern": "too many competing zones or overlapping functions",
+    "means": "The room may ask attention to split before it can settle.",
+    "affects": ["clarity", "calm"],
+    "userTranslation": "It can feel like the room wants more than one thing from you at once."
+  }
+]

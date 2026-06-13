@@ -1,0 +1,216 @@
+[
+    {
+        "id": "lighting-1",
+        "name": "Noguchi Style Woven Paper Lantern",
+        "category": "lighting",
+        "priceTier": "budget",
+        "price": 24.99,
+        "affiliateUrl": "https://amazon.com/dp/B001?tag=align-20",
+        "imageUrl": "/media/products/product-01.webp",
+        "styleTags": [
+            "minimalist",
+            "warm",
+            "natural"
+        ],
+        "rentalFriendly": true
+    },
+    {
+        "id": "lighting-2",
+        "name": "Dimmable LED Floor Lamp",
+        "category": "lighting",
+        "priceTier": "mid",
+        "price": 65.00,
+        "affiliateUrl": "https://amazon.com/dp/B002?tag=align-20",
+        "imageUrl": "/media/products/product-02.webp",
+        "styleTags": [
+            "modern",
+            "minimalist"
+        ],
+        "rentalFriendly": true
+    },
+    {
+        "id": "lighting-3",
+        "name": "Adjustable Target Desk Lamp",
+        "category": "lighting",
+        "priceTier": "premium",
+        "price": 180.00,
+        "affiliateUrl": "https://amazon.com/dp/B003?tag=align-20",
+        "imageUrl": "/media/products/product-03.webp",
+        "styleTags": [
+            "modern",
+            "industrial"
+        ],
+        "rentalFriendly": true
+    },
+    {
+        "id": "plant-1",
+        "name": "Snake Plant (Sansevieria)",
+        "category": "plant",
+        "priceTier": "budget",
+        "price": 19.99,
+        "affiliateUrl": "https://amazon.com/dp/B004?tag=align-20",
+        "imageUrl": "/media/products/product-04.webp",
+        "styleTags": [
+            "modern",
+            "minimalist",
+            "natural"
+        ],
+        "rentalFriendly": true
+    },
+    {
+        "id": "plant-2",
+        "name": "Monstera Deliciosa in Ceramic Pot",
+        "category": "plant",
+        "priceTier": "mid",
+        "price": 85.00,
+        "affiliateUrl": "https://amazon.com/dp/B005?tag=align-20",
+        "imageUrl": "/media/products/product-05.webp",
+        "styleTags": [
+            "warm",
+            "natural",
+            "modern"
+        ],
+        "rentalFriendly": true
+    },
+    {
+        "id": "plant-3",
+        "name": "Large Ficus Lyrata (Fiddle Leaf Fig)",
+        "category": "plant",
+        "priceTier": "premium",
+        "price": 220.00,
+        "affiliateUrl": "https://amazon.com/dp/B006?tag=align-20",
+        "imageUrl": "/media/products/product-06.webp",
+        "styleTags": [
+            "modern",
+            "natural"
+        ],
+        "rentalFriendly": false
+    },
+    {
+        "id": "storage-1",
+        "name": "Minimalist Desktop Organizer Tray",
+        "category": "storage",
+        "priceTier": "budget",
+        "price": 14.99,
+        "affiliateUrl": "https://amazon.com/dp/B007?tag=align-20",
+        "imageUrl": "/media/products/product-07.webp",
+        "styleTags": [
+            "minimalist",
+            "modern"
+        ],
+        "rentalFriendly": true
+    },
+    {
+        "id": "storage-2",
+        "name": "Woven Seagrass Storage Baskets (Set of 3)",
+        "category": "storage",
+        "priceTier": "mid",
+        "price": 55.00,
+        "affiliateUrl": "https://amazon.com/dp/B008?tag=align-20",
+        "imageUrl": "/media/products/product-08.webp",
+        "styleTags": [
+            "warm",
+            "natural"
+        ],
+        "rentalFriendly": true
+    },
+    {
+        "id": "storage-3",
+        "name": "Solid Oak Floating Shelf",
+        "category": "storage",
+        "priceTier": "premium",
+        "price": 165.00,
+        "affiliateUrl": "https://amazon.com/dp/B009?tag=align-20",
+        "imageUrl": "/media/products/product-09.webp",
+        "styleTags": [
+            "minimalist",
+            "natural"
+        ],
+        "rentalFriendly": false
+    },
+    {
+        "id": "textile-1",
+        "name": "Chunky Knit Cotton Throw",
+        "category": "textile",
+        "priceTier": "budget",
+        "price": 35.00,
+        "affiliateUrl": "https://amazon.com/dp/B010?tag=align-20",
+        "imageUrl": "/media/products/product-10.webp",
+        "styleTags": [
+            "warm",
+            "natural",
+            "modern"
+        ],
+        "rentalFriendly": true
+    },
+    {
+        "id": "textile-2",
+        "name": "Textured Linen Curtains",
+        "category": "textile",
+        "priceTier": "mid",
+        "price": 89.00,
+        "affiliateUrl": "https://amazon.com/dp/B011?tag=align-20",
+        "imageUrl": "/media/products/product-11.webp",
+        "styleTags": [
+            "warm",
+            "minimalist",
+            "natural"
+        ],
+        "rentalFriendly": false
+    },
+    {
+        "id": "textile-3",
+        "name": "Handwoven Wool Rug",
+        "category": "textile",
+        "priceTier": "premium",
+        "price": 280.00,
+        "affiliateUrl": "https://amazon.com/dp/B012?tag=align-20",
+        "imageUrl": "/media/products/product-12.webp",
+        "styleTags": [
+            "modern",
+            "warm"
+        ],
+        "rentalFriendly": true
+    },
+    {
+        "id": "decor-1",
+        "name": "Matte Ceramic Vase",
+        "category": "decor",
+        "priceTier": "budget",
+        "price": 22.00,
+        "affiliateUrl": "https://amazon.com/dp/B013?tag=align-20",
+        "imageUrl": "/media/products/product-13.webp",
+        "styleTags": [
+            "minimalist",
+            "modern"
+        ],
+        "rentalFriendly": true
+    },
+    {
+        "id": "decor-2",
+        "name": "Analog Desktop Clock",
+        "category": "decor",
+        "priceTier": "mid",
+        "price": 55.00,
+        "affiliateUrl": "https://amazon.com/dp/B014?tag=align-20",
+        "imageUrl": "/media/products/product-14.webp",
+        "styleTags": [
+            "minimalist",
+            "modern"
+        ],
+        "rentalFriendly": true
+    },
+    {
+        "id": "decor-3",
+        "name": "Large Abstract Canvas Print",
+        "category": "decor",
+        "priceTier": "premium",
+        "price": 195.00,
+        "affiliateUrl": "https://amazon.com/dp/B015?tag=align-20",
+        "imageUrl": "/media/products/product-15.webp",
+        "styleTags": [
+            "modern"
+        ],
+        "rentalFriendly": false
+    }
+]

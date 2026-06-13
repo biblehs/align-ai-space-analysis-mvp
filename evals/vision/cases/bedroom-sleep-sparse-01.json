@@ -1,0 +1,23 @@
+{
+  "id": "bedroom-sleep-sparse-01",
+  "imagePath": "evals/vision/images/bedroom-sleep-sparse-01.webp",
+  "spaceData": {
+    "spaceType": "bedroom",
+    "sunlight": "medium",
+    "density": "balanced",
+    "perspectives": ["wide"]
+  },
+  "expectations": {
+    "isRoomPhoto": true,
+    "isUsablePhoto": true,
+    "roomTypeDetectedAnyOf": ["bedroom"],
+    "minimumObservationCount": 5,
+    "requiredEvidenceKeywords": ["lighting", "wall", "empty"],
+    "supportZoneKeywords": ["bed"],
+    "stressZoneKeywords": ["wall", "light", "ceiling"],
+    "frictionKeywords": ["wall", "textures", "lighting"],
+    "standoutKeywords": ["bed", "floors", "lighting"],
+    "forbiddenKeywords": ["trauma", "chakra", "healing aura", "medical diagnosis"]
+  },
+  "notes": "Sparse bedroom with strong overhead lighting and insufficient soft restorative cues for sleep."
+}

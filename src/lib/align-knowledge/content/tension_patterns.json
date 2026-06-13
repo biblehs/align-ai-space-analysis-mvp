@@ -1,0 +1,34 @@
+[
+  {
+    "id": "harsh_overhead_light",
+    "label": "Harsh overhead light",
+    "triggerKeywords": ["harsh", "glare", "recessed", "overhead", "ceiling fan light", "bright direct"],
+    "interpretation": "The room may stay more alert than the goal requires because the highest light source is dominating the mood.",
+    "stateEffects": ["calm down", "warmth down", "restoration down"],
+    "firstMovePrinciples": ["reduce nighttime top-light dominance", "add a lower and softer light cue first"]
+  },
+  {
+    "id": "underclaimed_blank_zone",
+    "label": "Under-claimed blank zone",
+    "triggerKeywords": ["bare wall", "empty wall", "too empty", "large empty", "undecorated wall", "unclaimed space"],
+    "interpretation": "The room may feel unfinished or lightly suspended because the eye has nowhere gentle to settle in that zone.",
+    "stateEffects": ["warmth down", "restoration down", "openness mixed"],
+    "firstMovePrinciples": ["turn blank pressure into a soft landing point", "anchor the emptiest visible zone"]
+  },
+  {
+    "id": "softness_deficit",
+    "label": "Softness deficit",
+    "triggerKeywords": ["minimal decor", "no textiles", "hard surfaces", "functional", "stark", "few soft layers"],
+    "interpretation": "The room may read as usable and orderly, but not yet emotionally eased or physically inviting.",
+    "stateEffects": ["warmth down", "grounding slightly down", "restoration down"],
+    "firstMovePrinciples": ["add one softer layer", "use one low-cost restorative cue before reorganizing everything"]
+  },
+  {
+    "id": "visual_overlap",
+    "label": "Visual overlap",
+    "triggerKeywords": ["overlap", "mixed use", "split focus", "competing zones", "too many competing"],
+    "interpretation": "The room may ask the nervous system to hold more than one state at once.",
+    "stateEffects": ["clarity down", "calm down"],
+    "firstMovePrinciples": ["separate the cleanest lane first", "remove one competing cue before adding more"]
+  }
+]

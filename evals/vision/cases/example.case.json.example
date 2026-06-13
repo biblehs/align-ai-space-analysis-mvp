@@ -1,0 +1,24 @@
+{
+  "id": "bedroom-desk-overlap-01",
+  "imagePath": "evals/vision/images/bedroom-desk-overlap-01.jpg",
+  "spaceData": {
+    "spaceType": "bedroom",
+    "sunlight": "medium",
+    "density": "balanced",
+    "perspectives": ["wide"]
+  },
+  "expectations": {
+    "isRoomPhoto": true,
+    "isUsablePhoto": true,
+    "roomTypeDetectedAnyOf": ["bedroom", "workspace"],
+    "minimumObservationCount": 5,
+    "requiredObservationKeys": ["work_rest_overlap"],
+    "requiredEvidenceKeywords": ["desk", "bed", "window"],
+    "supportZoneKeywords": ["window"],
+    "stressZoneKeywords": ["desk", "bed"],
+    "frictionKeywords": ["overlap", "active"],
+    "standoutKeywords": ["desk", "bed", "window"],
+    "forbiddenKeywords": ["trauma", "chakra", "energy healing"]
+  },
+  "notes": "Mixed-use bedroom with visible work/rest overlap."
+}

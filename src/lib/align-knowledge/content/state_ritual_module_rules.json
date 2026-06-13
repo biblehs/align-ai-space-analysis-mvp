@@ -1,0 +1,55 @@
+[
+  {
+    "roomType": "bedroom",
+    "goal": "sleep",
+    "moduleNameOptions": [
+      "Tonight's Rest Ritual",
+      "Tonight's Closing Ritual",
+      "今晚的收尾动作",
+      "让这一步真正落下去"
+    ],
+    "placement": {
+      "snapshotAfter": "firstShift",
+      "snapshotBefore": "preview",
+      "fullReportAfter": "actionPlan"
+    },
+    "purpose": [
+      "Turn a space action into a felt state shift",
+      "Give the user a sense of being accompanied, not just instructed",
+      "Help the user notice a small improvement tonight rather than only reading advice"
+    ],
+    "hardRules": [
+      "Tie the ritual directly to the current room action",
+      "Give one primary ritual only, with at most one light alternative",
+      "Do not sound like generic wellness advice or lifestyle coaching",
+      "Do not introduce ritual objects, products, or purchases as requirements",
+      "Keep the module shorter and softer than the action block itself"
+    ],
+    "structure": {
+      "leadIn": [
+        "Tell the user they do not need to keep optimizing tonight",
+        "Signal that the current space step is enough for now",
+        "Create permission to stop rather than adding more tasks"
+      ],
+      "coreAction": [
+        "Suggest one small, realistic state action such as putting the phone down, keeping only one soft light on, taking a few slow breaths, or having a warm drink",
+        "Keep the action tied to the room's current shift rather than as a standalone habit tip"
+      ],
+      "stateLink": [
+        "Explain that this helps the room's change land in the body",
+        "Translate the room shift into a felt outcome like ending the day, slowing down, or feeling more held"
+      ],
+      "whatYouMayFeelTonight": [
+        "Offer one to three small things the user may notice tonight",
+        "Frame them as gentle observations, not promises",
+        "Use felt outcomes such as less unfinished energy, easier slowing down, or the room feeling more like rest"
+      ]
+    },
+    "template": {
+      "title": "Tonight's Rest Ritual",
+      "body": "After you lighten the bed zone, stop there for tonight. Put your phone down for a few minutes, keep only one softer light on, and sit at the bed or by the window long enough to let the room quiet with you. The goal is not to do more, but to let the room's shift land in your body.",
+      "feltShiftTitle": "What you may feel tonight",
+      "feltShiftBody": "You may notice that the room feels a little less unfinished, or that it is easier to slow down once you get into bed. You do not need a dramatic change right away. Just notice whether the room feels slightly more able to hold the end of the day."
+    }
+  }
+]
