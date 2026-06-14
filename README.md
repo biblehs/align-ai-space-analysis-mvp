@@ -1,111 +1,298 @@
 # ALIGN AI Space Analysis MVP
 
-ALIGN is an AI-native spatial analysis product that turns a room photo and a user goal into two connected outputs:
+> An AI-native spatial analysis product that turns a room photo and a user goal into actionable insights.
 
-- **Snapshot**: a concise, evidence-grounded reading with scores, tensions, and a first practical shift.
-- **Full Report**: an expanded action plan that preserves the Snapshot logic instead of generating a disconnected second answer.
+ALIGN generates two connected outputs:
 
-The repository is a production-shaped MVP built with Next.js, Gemini, Supabase, structured schemas, deterministic scoring, retrieval-backed writing, and guarded fallbacks.
+- **Snapshot** — A concise, evidence-grounded reading with scores, tensions, and a first practical shift
+- **Full Report** — An expanded action plan that preserves Snapshot logic instead of generating a disconnected second answer
 
-![ALIGN Snapshot interface](public/media/prototypes/snapshot-bedroom-generated.jpg)
+Built with Next.js, Google Gemini, Supabase, structured schemas, deterministic scoring, retrieval-backed writing, and guarded fallbacks.
+
+---
+
+## Architecture
+
+ALIGN deliberately avoids asking one model call to own the whole result. The system uses a multi-layer pipeline:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           ALIGN AI Pipeline                                  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                              │
+│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐                   │
+│  │  Perception   │───▶│ Normalization │───▶│  Reasoning   │                   │
+│  │  (Gemini)     │    │  (Schema)     │    │ (Deterministic)│                 │
+│  └──────────────┘    └──────────────┘    └──────────────┘                   │
+│         │                   │                   │                            │
+│         ▼                   ▼                   ▼                            │
+│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐                   │
+│  │  Vision       │    │  Versioned   │    │  Scores &    │                   │
+│  │  Evidence     │    │  Artifacts   │    │  Diagnosis   │                   │
+│  └──────────────┘    └──────────────┘    └──────────────┘                   │
+│                                                      │                       │
+│                                                      ▼                       │
+│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐                   │
+│  │  Retrieval    │◀───│   Writing    │◀───│  Guardrails  │                   │
+│  │  (Knowledge)  │    │  (Writers)   │    │  (Fallbacks) │                   │
+│  └──────────────┘    └──────────────┘    └──────────────┘                   │
+│         │                   │                   │                            │
+│         ▼                   ▼                   ▼                            │
+│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐                   │
+│  │  Rules &     │    │  Snapshot &  │    │  Quality     │                   │
+│  │  Patterns    │    │  Full Report │    │  Protection  │                   │
+│  └──────────────┘    └──────────────┘    └──────────────┘                   │
+│                                                                              │
+│  ┌─────────────────────────────────────────────────────────────────────┐    │
+│  │                        Observability Layer                           │    │
+│  │  Artifacts │ Prompt Versions │ Timings │ Job State │ Fallback Usage │    │
+│  └─────────────────────────────────────────────────────────────────────┘    │
+│                                                                              │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Pipeline Stages
+
+| Stage | Purpose | Technology |
+|-------|---------|------------|
+| **Perception** | Extract bounded visual evidence from uploaded images | Google Gemini Vision |
+| **Normalization** | Convert model output into versioned artifacts | JSON Schema Validation |
+| **Reasoning Control** | Calculate scores, priorities, contradictions, pattern diagnosis | Deterministic Builders |
+| **Retrieval** | Select room-goal rules, tension patterns, action mappings | Local Knowledge Layer |
+| **Writing** | Improve clarity without changing evidence or scores | Dedicated Writer Modules |
+| **Guardrails** | Forbid claims, unsupported inferences, enforce limits | Validation & Fallbacks |
+| **Observability** | Persist artifacts, timings, job state for debugging | Structured Logging |
+
+---
 
 ## Product Flow
 
 ```mermaid
 flowchart LR
-    A[Room photos and user goal] --> B[Upload validation and normalization]
-    B --> C[Vision pre-analysis]
-    C --> D[Structured observations]
-    D --> E[Deterministic scoring and diagnosis]
-    E --> F[Knowledge retrieval]
-    F --> G[Snapshot writer]
-    G --> H[Snapshot]
-    H --> I[Full report expansion]
-    I --> J[Paid action plan]
+    A[Room Photo + Goal] --> B[Upload & Validate]
+    B --> C[Vision Analysis]
+    C --> D[Structured Observations]
+    D --> E[Deterministic Scoring]
+    E --> F[Knowledge Retrieval]
+    F --> G[Snapshot Writer]
+    G --> H[Free Snapshot]
+    H --> I[Full Report Writer]
+    I --> J[Paid Action Plan]
+    
+    style A fill:#e1f5fe
+    style H fill:#c8e6c9
+    style J fill:#fff9c4
 ```
 
-## AI Architecture
+---
 
-ALIGN deliberately avoids asking one model call to own the whole result.
+## Technology Stack
 
-1. **Perception**: Gemini extracts bounded visual evidence from uploaded images.
-2. **Normalization**: schema validation converts model output into versioned artifacts.
-3. **Reasoning control**: deterministic builders calculate scores, priorities, contradictions, and pattern diagnosis.
-4. **Retrieval**: a local knowledge layer selects room-goal rules, tension patterns, interpretation rules, and action mappings.
-5. **Writing**: dedicated Snapshot and Full Report writers improve clarity without changing evidence or scores.
-6. **Guardrails**: forbidden claims, unsupported inferences, length limits, URL validation, retries, and deterministic fallback paths protect output quality.
-7. **Observability**: artifacts, prompt/schema versions, timings, job state, and fallback usage are persisted for debugging and evaluation.
+| Layer | Technology | Purpose |
+|-------|------------|---------|
+| **Frontend** | Next.js 16, React 19, Tailwind CSS 4 | App Router, Server Components |
+| **AI Engine** | Google Gemini via `@google/genai` | Vision analysis, text generation |
+| **Database** | Supabase (PostgreSQL) | Auth, storage, real-time |
+| **Billing** | Creem | Payment processing |
+| **Email** | Resend | Transactional emails |
+| **Security** | Cloudflare Turnstile | Bot protection |
+| **Schemas** | JSON Schema | Constrained generation |
 
-See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the detailed system map.
+---
+
+## Repository Structure
+
+```
+align-ai-space-analysis-mvp/
+├── src/
+│   ├── app/                    # Next.js App Router — route groups & API handlers
+│   ├── features/               # Product-facing feature modules
+│   └── lib/
+│       ├── analysis-*          # Pipeline orchestration & artifacts
+│       ├── align-v2/           # Snapshot V2 contracts & builders
+│       ├── align-knowledge/    # Retrieval knowledge & rules
+│       ├── *-writer.ts         # Bounded AI writing layers
+│       └── repositories/       # Persistence boundaries
+├── public/
+│   ├── media/                  # Application images
+│   └── landing/                # Marketing assets
+├── evals/vision/               # Vision evaluation tooling
+├── scripts/                    # Build & verification scripts
+├── supabase/migrations/        # Database schema & policies
+├── docs/                       # Architecture decisions
+├── middleware.ts                # Rate limiting & request tracing
+├── .env.example                # Environment template
+└── SECURITY.md                 # Security guidelines
+```
+
+---
 
 ## MVP Capabilities
 
-- multi-step room photo intake and personalization
-- image optimization and storage validation
-- asynchronous pre-analysis and snapshot generation
-- structured Snapshot V2 contract
-- diagnosis and retrieval-augmented writing layers
-- Snapshot and Full Report continuity
-- authentication, account history, and saved reports
-- payment-gated report fulfillment
-- waitlist, analytics, rate limits, and security event recording
-- local deterministic demo fallback when external services are absent
+### Core Features
+- ✅ Multi-step room photo intake and personalization
+- ✅ Image optimization and storage validation
+- ✅ Asynchronous pre-analysis and snapshot generation
+- ✅ Structured Snapshot V2 contract
+- ✅ Diagnosis and retrieval-augmented writing layers
+- ✅ Snapshot and Full Report continuity
 
-## Technology
+### User Features
+- ✅ Authentication (Email + Google OAuth)
+- ✅ Account history and saved reports
+- ✅ Payment-gated report fulfillment
+- ✅ Waitlist and analytics
 
-- Next.js App Router, React, TypeScript, Tailwind CSS
-- Google Gemini via `@google/genai`
-- Supabase Auth, Postgres, and Storage
-- Creem billing and Resend email
-- JSON-schema constrained generation and versioned artifacts
+### Technical Features
+- ✅ Rate limiting and security event recording
+- ✅ Local deterministic demo fallback
+- ✅ Comprehensive observability
 
-## Run Locally
+---
+
+## Roadmap
+
+### Phase 1: MVP (Current) ✅
+- [x] Core analysis pipeline
+- [x] Snapshot and Full Report generation
+- [x] User authentication and accounts
+- [x] Payment integration
+- [x] Basic security and rate limiting
+
+### Phase 2: Enhancement 🚧
+- [ ] Multi-room analysis support
+- [ ] Historical comparison and trends
+- [ ] Custom knowledge base expansion
+- [ ] Advanced analytics dashboard
+- [ ] Webhook integrations
+
+### Phase 3: Scale 📋
+- [ ] Multi-language support
+- [ ] Mobile app (React Native)
+- [ ] API for third-party integrations
+- [ ] Enterprise features
+- [ ] White-label solutions
+
+### Phase 4: Intelligence 🔮
+- [ ] Personalized learning from user feedback
+- [ ] Predictive space optimization
+- [ ] Integration with smart home devices
+- [ ] AR visualization support
+- [ ] Community knowledge sharing
+
+---
+
+## Quick Start
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+- Supabase account (optional for demo)
+- Google Gemini API key (optional for demo)
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/biblehs/align-ai-space-analysis-mvp.git
+cd align-ai-space-analysis-mvp
+
+# Install dependencies
 npm install
+
+# Copy environment template
 cp .env.example .env.local
+
+# Start development server
 npm run dev
 ```
 
-Open `http://localhost:3000`. The product can render its local demo path without production credentials; live AI, persistence, billing, and email require the corresponding environment variables.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Demo Mode
+
+The application runs in demo mode without external credentials:
+- ✅ UI renders fully
+- ✅ Local deterministic analysis works
+- ❌ Live AI analysis requires Gemini API key
+- ❌ Persistence requires Supabase credentials
+- ❌ Billing requires Creem credentials
+
+---
 
 ## Quality Checks
 
 ```bash
+# Run all checks
 npm run verify
+
+# Individual checks
+npm run lint          # ESLint
+npm run typecheck     # TypeScript
+npm run build         # Production build
+npm run check:structure  # Architecture boundaries
+
+# Security audit
 npm audit --omit=dev
 ```
 
-`npm run verify` runs the architecture boundary check, ESLint, TypeScript, and a production build.
+---
 
-## Environment Boundaries
+## Environment Variables
 
-- Client-safe values use the `NEXT_PUBLIC_` prefix.
-- Gemini, Supabase service-role, billing, email, webhook, and admin credentials stay server-only.
-- Internal operator access fails closed when `INTERNAL_ADMIN_EMAIL` is absent.
-- `.env.local`, provider state, build output, local screenshots, and archives are ignored by Git.
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `GEMINI_API_KEY` | For AI | Google Gemini API key |
+| `NEXT_PUBLIC_SUPABASE_URL` | For DB | Supabase project URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | For DB | Supabase anonymous key |
+| `SUPABASE_SERVICE_ROLE_KEY` | For DB | Supabase service role key |
+| `RESEND_API_KEY` | For Email | Resend API key |
+| `CREEM_API_KEY` | For Billing | Creem API key |
+| `TURNSTILE_SECRET_KEY` | For Security | Cloudflare Turnstile secret |
 
-Use [.env.example](.env.example) as the configuration inventory. Never commit real credentials.
+See `.env.example` for complete list.
 
-## Repository Map
-
-```text
-src/app/                 route groups and API handlers
-src/features/            product-facing feature modules
-src/lib/analysis-*       pipeline orchestration and artifacts
-src/lib/align-v2/        Snapshot V2 contracts and builders
-src/lib/align-knowledge/ retrieval knowledge and rules
-src/lib/*-writer.ts      bounded AI writing layers
-src/lib/repositories/    persistence boundaries
-supabase/migrations/     schema, policy, and job infrastructure
-scripts/evals/vision/    repeatable vision evaluation tooling
-docs/                    architecture and product decisions
-```
+---
 
 ## Security
 
-Read [SECURITY.md](SECURITY.md) before deployment. This public portfolio version intentionally excludes development backups, credentials, personal administrator identifiers, provider-local state, and third-party prototype imagery.
+- **No hardcoded secrets** — All sensitive values use environment variables
+- **Server-only secrets** — Gemini, Supabase service-role, billing, email stay server-side
+- **Rate limiting** — 30 requests per IP per minute on API routes
+- **Bot protection** — Cloudflare Turnstile integration
+- **IP hashing** — SHA-256 with configurable salt
+- **Security events** — Logged and alerted via webhooks
+
+See [SECURITY.md](SECURITY.md) for deployment guidelines.
+
+---
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## License
+
+This project is a portfolio reference implementation. See repository owner for licensing details.
+
+---
 
 ## Status
 
-This is an MVP and portfolio reference implementation. It demonstrates the complete product and AI workflow, while production operation still requires provider accounts, reviewed legal copy, monitoring, and deployment-specific security controls.
+**MVP Complete** — This is a production-shaped reference implementation demonstrating the complete product and AI workflow.
+
+Production operation requires:
+- Provider accounts (Gemini, Supabase, Creem, Resend)
+- Reviewed legal copy
+- Monitoring and alerting
+- Deployment-specific security controls
+
+---
+
+**Built with ❤️ using Next.js, Google Gemini, and Supabase**
